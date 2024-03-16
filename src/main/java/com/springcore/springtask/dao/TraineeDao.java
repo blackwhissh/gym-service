@@ -3,6 +3,7 @@ package com.springcore.springtask.dao;
 import com.springcore.springtask.entity.Trainee;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +12,7 @@ import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.logging.Logger;
-
+@Repository
 public class TraineeDao {
     private final Logger logger = Logger.getLogger(this.getClass().getName());
     @Value("${traineeFilePath}")

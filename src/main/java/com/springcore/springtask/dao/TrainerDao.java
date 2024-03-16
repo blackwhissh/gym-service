@@ -4,6 +4,7 @@ import com.springcore.springtask.entity.Trainer;
 import com.springcore.springtask.entity.TrainingType;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 import java.util.logging.Logger;
-
+@Repository
 public class TrainerDao {
     private final Logger logger = Logger.getLogger(this.getClass().getName());
     private final Map<String, Trainer> trainerMap = new HashMap<>();
